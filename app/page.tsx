@@ -23,19 +23,24 @@ export default function Home() {
 					aspectRatio: '900/100',
 				}}
 			></div>
-			<div className="flex justify-start">
-				<SectionItem />
-			</div>
-			<div className="flex justify-end">
-				<SectionItem />
-			</div>
-			<div
-				className="bg-cover"
-				style={{
-					backgroundImage: `url(${bottomSectionBackground.src})`,
-					aspectRatio: '900/100',
-				}}
-			></div>
+			<section>
+				<h1 className="text-center text-5xl mb-6">
+					A bit about this project 👀
+				</h1>
+				<div className="flex justify-start">
+					<SectionItem />
+				</div>
+				<div className="flex justify-end">
+					<SectionItem />
+				</div>
+				<div
+					className="bg-cover"
+					style={{
+						backgroundImage: `url(${bottomSectionBackground.src})`,
+						aspectRatio: '900/100',
+					}}
+				></div>
+			</section>
 			<Footer />
 		</>
 	)
