@@ -8,6 +8,8 @@ This repository provides a quick and easy way to get started with a simple full-
 
 ## Features
 
+![arch-diagram](./simple-arch-diagram.png)
+
 - **Frontend**: NextJS application using the new app router, Tailwind CSS, and DaisyUI for styling
 - **Backend**: AWS Amplify Gen2 powered backend with the following resources:
   - **Data**: AWS AppSync (GraphQL API) with real-time websocket subscriptions, backed by DynamoDB
