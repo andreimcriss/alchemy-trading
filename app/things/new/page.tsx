@@ -1,8 +1,12 @@
 import Navbar from '@/components/Navbar'
+import SubmitButton from '@/components/SubmitButton'
+import authGetCurrentUserServer from '@/utils/amplifyServertils'
+import { AuthUser } from 'aws-amplify/auth'
 import { revalidatePath } from 'next/cache'
-import React from 'react'
 
-function NewThingPage() {
+async function NewThingPage() {
+	const user = (await authGetCurrentUserServer()) as AuthUser
+	console.log('the user details', user)
 	async function createNewThing(formData: FormData) {
 		'use server'
 
@@ -21,7 +25,7 @@ function NewThingPage() {
 			New thing. Probably want to add a reusable form here.
 			<form action={createNewThing}>
 				<input name="name" type="text" />
-				<button type="submit">Submit</button>
+				<SubmitButton />
 			</form>
 		</div>
 	)
