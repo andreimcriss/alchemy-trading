@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #3A9FF7;
+    --color-secondary: #FF8A3D;
+    --color-accent-green: #4ADE80;
+    --color-accent-violet: #8B5CF6;
+    --color-neutral-off-white: #F9FAFB;
+    --color-neutral-charcoal: #1F2937;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-600 transition-colors;
+  }
+  
+  .bg-neutral-off-white {
+    @apply bg-gray-50;
+  }
+  
+  .text-neutral-charcoal {
+    @apply text-gray-800;
+  }
+}
